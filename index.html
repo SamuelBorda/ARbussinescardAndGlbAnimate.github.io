@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  
+
+<head>
+  <meta charset="utf-8" />
+  <title>Model Neeko VR-AR</title>
+  <meta name="description" content="Model Viewer (VR / AR) • A-Frame" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes"
+  />
+
+  
+  <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.0.0/dist/aframe-extras.min.js"></script>
+  <script src="https://unpkg.com/aframe-extras@3.3.0/dist/aframe-extras.min.js"></script>
+
+
+</head>
+
+<body>
+  <a-scene embedded >
+  
+    
+      <a-assets>
+        <a-assets>
+    <img id="sky" src="https://cdn.glitch.global/af76a494-3bcd-4965-9415-c57f77d2d674/full-moon-witch-wallpaper-2560x1080_14.jpg?v=1694334149356">
+  </a-assets>
+
+        <a-asset-item
+          id="neekoModel"
+          src="https://cdn.glitch.global/af76a494-3bcd-4965-9415-c57f77d2d674/neekosaludando.glb?v=1694261956607"
+        ></a-asset-item>
+        <a-asset-item
+          id="allay"
+          src="  
+ https://cdn.glitch.global/af76a494-3bcd-4965-9415-c57f77d2d674/allay_redesigned.glb?v=1694332918074"
+        ></a-asset-item>
+      </a-assets>
+
+      <a-sky src="#sky" rotation="0 -90 0"></a-sky>
+    <a-entity
+      gltf-model="#neekoModel"
+      position="'0 0.5 0'"
+      animation-mixer
+    ></a-entity>
+   <a-entity
+      gltf-model="#allay"
+      position="1.5 3 -4"
+      animation-mixer
+    ></a-entity>
+    <!--   <a-entity gltf-model="#fondo" position="1.5 3 -5" animation-mixer></a-entity> -->
+
+
+  </a-scene>
+</body>
+</html>
